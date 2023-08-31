@@ -19,10 +19,13 @@ Active Directory is used throughout the business world to manage high numbers of
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
-- Step 1
-- Step 2
-- Step 3
-- Step 4
+- Create two virtual machines in Microsoft Azure: Client-1 (Windows 10), DC-1 (Windows Server 2022)
+- Set DC-1 to a static IP address
+- Test the connection from Client-1 to DC-1
+- Install Active Directory
+- Create an Admin account and multiple other user accounts
+- Join Client-1 to DC-1
+- Setup Remote Desktop for non-admin users on Client-1
 
 <h2>Deployment and Configuration</h2>
 <p>1. In Microsoft Azure, create a new Resource group. After this, in the new resource group, create a new virtual machine (VM) with 2-4 virtual CPUs. Make sure to also create a new virtual network. Connect to the VM using a Remote Desktop program and the public IP addess of your new VM. <br /></p>
