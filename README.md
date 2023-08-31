@@ -23,10 +23,23 @@ Active Directory is used throughout the business world to manage high numbers of
 - Set DC-1 to a static IP address
 - Test the connection from Client-1 to DC-1
 - Install Active Directory
-- Create an Admin account and multiple other user accounts
+- Create an Admin account and multiple other User accounts
 - Join Client-1 to DC-1
 - Setup Remote Desktop for non-admin users on Client-1
 
 <h2>Deployment and Configuration</h2>
-<p>1. In Microsoft Azure, create a new Resource group. After this, in the new resource group, create a new virtual machine (VM) with 2-4 virtual CPUs. Make sure to also create a new virtual network. Connect to the VM using a Remote Desktop program and the public IP addess of your new VM. <br /></p>
-<img src="https://github.com/GaryKirk/osticket-prereqs/assets/137613637/afdf7df5-0b36-4ca7-8142-f95dbb57b113" alt="Create VM"/><br /><br />
+<p>1. Create a new virtual machine in Microsoft Azure. Name this "DC-1". Be sure to put all resources in the same region. Choose Windows Server 2022 as the Image and apply two VCPUs. Add an Admin username and password. Click to create the virtul machine. Once created, create another new virtual machine in the same resource group. Name this "Client-1". Choose Windows 10 as the image and make sure it has two VCPUs. Add a username and password for this virtual machine. Also, add it to the same virtual network as DC-1. Click to create the new virtual machine. <br /></p>
+<img src="https://github.com/GaryKirk/configure-ad/assets/137613637/d8f57357-0f53-4d4d-8b78-ee93e25741ed" alt="Create two VMs"/><br /><br />
+
+<p>2. In Microsoft Azure go to DC-1 --> Networking --> Network Interface --> IP-configuations --> ipconfig1 and set the IP address to 'Static'. Click to save the changes. This means that the IP address of DC-1 will stay the same. <br /></p>
+<img src="https://github.com/GaryKirk/configure-ad/assets/137613637/a0b69eb4-04ae-436a-adcc-da063205d7e4" alt="Static IP" width="500" length="500"/><br /><br />
+
+<p>3. In order to test the connection between Client-1 and DC-1, first login to Client-1 using Remote Desktop, Client-1's public IP address and the correct login credentials. After this, in Microsoft Azure, open DC-1 and copy the private IP address. On Client-1, open a Command Prompt windows and type "ping -t (DC-1 private IP address). You will notice that this will continue to time out.<br /></p>
+<img src="https://github.com/GaryKirk/configure-ad/assets/137613637/0792bcb0-e087-471b-a1dd-e5375e593569" alt="Ping Time Out" width="500" length="500"/><br /><br />
+
+<p>4. Next, using Remote Desktop, login to DC-1. You will need DC-1's public IP address and login information to do this. Once the desktop loads, type "wf.msc" in the search bar. This will take you to Windows Firewall. Click Inbound Rules --> Sort the table by 'Protocol' --> Find 'ICMPv4' and enable all of these rules. Finally, go back to your instance of Client-1 and you should now see that the ping comand is successful.<br /></p>
+<img src="https://github.com/GaryKirk/configure-ad/assets/137613637/7a1ecef7-5005-408c-98f2-dd5a39bef5f7" alt="Ping Successful" width="500" length="500"/><br /><br />
+
+<p>5. In the DC-1<br /></p>
+<img src="https://github.com/GaryKirk/configure-ad/assets/137613637/7a1ecef7-5005-408c-98f2-dd5a39bef5f7" alt="Ping Successful" width="500" length="500"/><br /><br />
+
