@@ -48,3 +48,9 @@ Active Directory is used throughout the business world to manage high numbers of
 
 <p>6. To ensure that Active Driectory installed correctly, click start and search for 'Active Directory Users and Computers'. To create an Organizational Unit, which is like a folder,  right-click the domain nam eon the left menu. Click 'New' and then Organizational Unit. Use the name "_EMPLOYEES" and click 'OK'. Complete the process again to create an organizational unit called "_ADMINS". <br /></p>
 <img src="https://github.com/GaryKirk/configure-ad/assets/137613637/8068207e-b605-4599-a805-28d21bb9ea73" alt="Add OUs" width="500" length="500"/><br /><br />
+
+<p>7. In the _Admins Organizational Unit, right-click ---> New ---> User. Add a first and last name. Also, add a User login name. Click 'Next' and create a password for the account. Because this is a tutorial, uncheck 'User must change password at next login'. Click 'OK' to create the user account. This will take you back to Active Driectory dashboard. Find the account in '_ADMINS' and riht-click on the username. Select Properties ---> Member Of ---> Add ---> type "domain" ---> Check Names ---> click 'Domain Admins' ---> click Apply and OK.<br /></p>
+<img src="https://github.com/GaryKirk/configure-ad/assets/137613637/246d847e-6680-4575-8254-3baf89dd6159" alt="Add OUs" width="500" length="500"/><br /><br />
+
+<p>8.<br /></p>
+<img src="https://github.com/GaryKirk/configure-ad/assets/137613637/246d847e-6680-4575-8254-3baf89dd6159" alt="Add OUs" width="500" length="500"/><br /><br />
