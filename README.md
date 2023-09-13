@@ -47,4 +47,4 @@ Active Directory is used throughout the business world to manage high numbers of
 <img src="https://github.com/GaryKirk/configure-ad/assets/137613637/e8057bac-3e74-4efc-868a-003cac206031" alt="Install AD" width="500" length="500"/><br /><br />
 
 <p>6. To ensure that Active Driectory installed correctly, click start and search for 'Active Directory Users and Computers'. To create an Organizational Unit, which is like a folder,  right-click the domain nam eon the left menu. Click 'New' and then Organizational Unit. Use the name "_EMPLOYEES" and click 'OK'. Complete the process again to create an organizational unit called "_ADMINS". <br /></p>
-<img src="https://github.com/GaryKirk/configure-ad/assets/137613637/e8057bac-3e74-4efc-868a-003cac206031" alt="Install AD" width="500" length="500"/><br /><br />
+<img src="https://github.com/GaryKirk/configure-ad/assets/137613637/8068207e-b605-4599-a805-28d21bb9ea73" alt="Add OUs" width="500" length="500"/><br /><br />
