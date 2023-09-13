@@ -55,8 +55,12 @@ Active Directory is used throughout the business world to manage high numbers of
 <p>8. Next, log out of the current session and log back in to DC-1 using the newly created admin credentials. Remember to use the the fully qualified domain name.<br /></p>
 <img src="https://github.com/GaryKirk/configure-ad/assets/137613637/58ba5f9a-a934-4acb-a68f-0bdf1581567f" alt="Test New Admin Acc" width="500" length="500"/><br /><br />
 
-<p>9. In the Azure portal, go to DC-1. In Networking, click to copy DC-1's NIC Private IP address. Go to Client-1 and click on Networking. Click next to 'Network Interface'. Go to DNS Server ---> click 'Custom' --->  Paste in DC-1's private Ip address ---> Click 'Save'.  You have now set Client-1's DNS settings to DC-1's private IP address.<br /></p>
+<p>9. In the Azure portal, go to DC-1. In Networking, click to copy DC-1's NIC Private IP address. Go to Client-1 and click on Networking. Click next to 'Network Interface'. Go to DNS Server ---> click 'Custom' --->  Paste in DC-1's private Ip address ---> Click 'Save'.  You have now set Client-1's DNS settings to DC-1's private IP address. After this has updated, restart the Client-1 virtual machine in the Azure Portal. This will flush the DNS of Client-1. Log back in to Client-1 using the original login information. <br /></p>
 <img src="https://github.com/GaryKirk/configure-ad/assets/137613637/47c42f8e-c528-4fce-a37f-5de49407d6f9" alt="Set Client-1 to DC-1 Private IP" width="500" length="500"/><br /><br />
 
-<p>10. <br /></p>
-<img src="https://github.com/GaryKirk/configure-ad/assets/137613637/47c42f8e-c528-4fce-a37f-5de49407d6f9" width="500" length="500"/><br /><br />
+<p>10. To continue, right-click Start ---> System ---> Rename this PC (advanced) ---> Change ---> Domain ---> type the domain name ---> OK ---> type the Admin account details that were created ---> OK. Be sure to use the fully qualified domain name. Restart the session when prompted to do so. Log back in to Client-1 using the new admin account details.<br /></p>
+<img src="https://github.com/GaryKirk/configure-ad/assets/137613637/6e5f5f45-cedb-4d30-ba1e-75cc39ff91ee" alt="Changing Domain" width="500" length="500"/><br /><br />
+
+<p>11.  <br /></p>
+<img src="https://github.com/GaryKirk/configure-ad/assets/137613637/6e5f5f45-cedb-4d30-ba1e-75cc39ff91ee" alt="Set Client-1 to DC-1 Private IP" width="500" length="500"/><br /><br />
+
