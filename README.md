@@ -49,8 +49,14 @@ Active Directory is used throughout the business world to manage high numbers of
 <p>6. To ensure that Active Driectory installed correctly, click start and search for 'Active Directory Users and Computers'. To create an Organizational Unit, which is like a folder,  right-click the domain nam eon the left menu. Click 'New' and then Organizational Unit. Use the name "_EMPLOYEES" and click 'OK'. Complete the process again to create an organizational unit called "_ADMINS". <br /></p>
 <img src="https://github.com/GaryKirk/configure-ad/assets/137613637/8068207e-b605-4599-a805-28d21bb9ea73" alt="Add OUs" width="500" length="500"/><br /><br />
 
-<p>7. In the _Admins Organizational Unit, right-click ---> New ---> User. Add a first and last name. Also, add a User login name. Click 'Next' and create a password for the account. Because this is a tutorial, uncheck 'User must change password at next login'. Click 'OK' to create the user account. This will take you back to Active Driectory dashboard. Find the account in '_ADMINS' and riht-click on the username. Select Properties ---> Member Of ---> Add ---> type "domain" ---> Check Names ---> click 'Domain Admins' ---> click Apply and OK.<br /></p>
+<p>7. In the _ADMINS Organizational Unit, right-click ---> New ---> User. Add a first and last name. Also, add a User login name. Click 'Next' and create a password for the account. Because this is a tutorial, uncheck 'User must change password at next login'. Click 'OK' to create the user account. This will take you back to Active Driectory dashboard. Find the account in '_ADMINS' and riht-click on the username. Select Properties ---> Member Of ---> Add ---> type "domain" ---> Check Names ---> click 'Domain Admins' ---> click Apply and OK.<br /></p>
 <img src="https://github.com/GaryKirk/configure-ad/assets/137613637/246d847e-6680-4575-8254-3baf89dd6159" alt="Add a New Admin" width="500" length="500"/><br /><br />
 
 <p>8. Next, log out of the current session and log back in to DC-1 using the newly created admin credentials. Remember to use the the fully qualified domain name.<br /></p>
-<img src="https://github.com/GaryKirk/configure-ad/assets/137613637/58ba5f9a-a934-4acb-a68f-0bdf1581567f" width="500" length="500"/><br /><br />
+<img src="https://github.com/GaryKirk/configure-ad/assets/137613637/58ba5f9a-a934-4acb-a68f-0bdf1581567f" alt="Test New Admin Acc" width="500" length="500"/><br /><br />
+
+<p>9. In the Azure portal, go to DC-1. In Networking, click to copy DC-1's NIC Private IP address. Go to Client-1 and click on Networking. Click next to 'Network Interface'. Go to DNS Server ---> click 'Custom' --->  Paste in DC-1's private Ip address ---> Click 'Save'.  You have now set Client-1's DNS settings to DC-1's private IP address.<br /></p>
+<img src="https://github.com/GaryKirk/configure-ad/assets/137613637/47c42f8e-c528-4fce-a37f-5de49407d6f9" alt="Set Client-1 to DC-1 Private IP" width="500" length="500"/><br /><br />
+
+<p>10. <br /></p>
+<img src="https://github.com/GaryKirk/configure-ad/assets/137613637/47c42f8e-c528-4fce-a37f-5de49407d6f9" width="500" length="500"/><br /><br />
