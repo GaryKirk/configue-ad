@@ -61,6 +61,9 @@ Active Directory is used throughout the business world to manage high numbers of
 <p>10. To continue, right-click Start ---> System ---> Rename this PC (advanced) ---> Change ---> Domain ---> type the domain name ---> OK ---> type the Admin account details that were created ---> OK. Be sure to use the fully qualified domain name. Restart the session when prompted to do so. Log back in to Client-1 using the new admin account details.<br /></p>
 <img src="https://github.com/GaryKirk/configure-ad/assets/137613637/6e5f5f45-cedb-4d30-ba1e-75cc39ff91ee" alt="Change Domain" width="500" length="500"/><br /><br />
 
-<p>11. Next, right-click Start ---> System ---> Remote Desktop ---> Select sers that can remotely access PC ---> Add ---> type "Domain Users" ---> Check Names ---> OK ---> OK. This allows all users of the domain to log in remotely.<br /></p>
+<p>11. Next, right-click Start ---> System ---> Remote Desktop ---> Select sers that can remotely access PC ---> Add ---> type "Domain Users" ---> Check Names ---> OK ---> OK. This allows all users of the domain to log in remotely. If you had hundreds or thousands of users, you can use Group Policy to do this same change. <br /></p>
 <img src="https://github.com/GaryKirk/configure-ad/assets/137613637/3fea8302-8640-4d37-ab9e-c6ee9d1bd7cf" alt="Grant Remote Access" width="500" length="500"/><br /><br />
+
+<p>12. Login to DC-1 using the admin account details. Click Start ---> search for "PowerShell ISE" ---> right-click and choose 'Run as Administrator' --->  Create a new file ---> copy the contents of this script in to the file<br /></p>
+<img src="https://github.com/GaryKirk/configure-ad/assets/137613637/dcafff9b-2a1b-4771-8e5f-af4f29e635a2" alt="Add Script" width="500" length="500"/><br /><br />
 
