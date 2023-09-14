@@ -64,6 +64,16 @@ Active Directory is used throughout the business world to manage high numbers of
 <p>11. Next, right-click Start ---> System ---> Remote Desktop ---> Select sers that can remotely access PC ---> Add ---> type "Domain Users" ---> Check Names ---> OK ---> OK. This allows all users of the domain to log in remotely. If you had hundreds or thousands of users, you can use Group Policy to do this same change. <br /></p>
 <img src="https://github.com/GaryKirk/configure-ad/assets/137613637/3fea8302-8640-4d37-ab9e-c6ee9d1bd7cf" alt="Grant Remote Access" width="500" length="500"/><br /><br />
 
-<p>12. Login to DC-1 using the admin account details. Click Start ---> search for "PowerShell ISE" ---> right-click and choose 'Run as Administrator' --->  Create a new file ---> copy the contents of <a href="https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1">this script</a> in to the file<br /></p>
+<p>12. Login to DC-1 using the admin account details. Click Start ---> search for "PowerShell ISE" ---> right-click and choose 'Run as Administrator' --->  Create a new file ---> copy the contents of <a href="https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1">this script</a> in to the file and save. When the script is run it will create 1000 random user accounts, which can then be used to practice with in Active Directory. All of the accounts will be created within the _EMPLOYEES group. Go to that group in Active Directory and copy the username and password for one of the user accounts. Once the script has finished running, log out of Client-1.<br /></p>
 <img src="https://github.com/GaryKirk/configure-ad/assets/137613637/dcafff9b-2a1b-4771-8e5f-af4f29e635a2" alt="Add Script" width="500" length="500"/><br /><br />
 
+<p>13. Now, connect to Client-1 using the new user credentials that were created with the script. Remember to use the fully qualified domain name. Run a Command Prompt and use 'whoami' and 'hostname' to check that the everything worked correctly.<br /></p>
+<img src="https://github.com/GaryKirk/configure-ad/assets/137613637/24d370c9-49d1-440e-800b-93efc4cffa47" alt="Logged in as New User" width="500" length="500"/><br /><br />
+
+<p>14. Now, connect to Client-1 using the new user credentials that were created with the script. Remember to use the fully qualified domain name. Run a Command Prompt and use 'whoami' and 'hostname' to check that the everything worked correctly. Log out of Client-1.<br /></p>
+<img src="https://github.com/GaryKirk/configure-ad/assets/137613637/24d370c9-49d1-440e-800b-93efc4cffa47" alt="Log in as New User" width="500" length="500"/><br /><br />
+
+<p>15. In DC-1, pick a new user account and write down the credentials. Use those credentials to login to Client-1, however purposely get the password wrong 10 times. This will lock the account. In DC-1, right-click the username that was locked and click 'Properties'. Next, click 'Account' and choose 'Unlock Account'. Finally, click 'OK'. The account will now be unlocked. Use the correct credntials to log in to Client-1 to check this. <br /></p>
+<img src="https://github.com/GaryKirk/configure-ad/assets/137613637/9a2450e3-63db-4966-8f47-d5eea4c38ace" alt="Unlock Account" width="500" length="500"/><br /><br />
+
+Active Directory is now set up on DC-1. There are 1000 user accounts within our organization. The lab can now be used to practice different tasks within Active Driectory, such as restting user passwords and disbaling accounts.
