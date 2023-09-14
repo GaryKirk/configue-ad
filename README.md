@@ -59,8 +59,8 @@ Active Directory is used throughout the business world to manage high numbers of
 <img src="https://github.com/GaryKirk/configure-ad/assets/137613637/47c42f8e-c528-4fce-a37f-5de49407d6f9" alt="Set Client-1 to DC-1 Private IP" width="500" length="500"/><br /><br />
 
 <p>10. To continue, right-click Start ---> System ---> Rename this PC (advanced) ---> Change ---> Domain ---> type the domain name ---> OK ---> type the Admin account details that were created ---> OK. Be sure to use the fully qualified domain name. Restart the session when prompted to do so. Log back in to Client-1 using the new admin account details.<br /></p>
-<img src="https://github.com/GaryKirk/configure-ad/assets/137613637/6e5f5f45-cedb-4d30-ba1e-75cc39ff91ee" alt="Changing Domain" width="500" length="500"/><br /><br />
+<img src="https://github.com/GaryKirk/configure-ad/assets/137613637/6e5f5f45-cedb-4d30-ba1e-75cc39ff91ee" alt="Change Domain" width="500" length="500"/><br /><br />
 
-<p>11.  <br /></p>
-<img src="https://github.com/GaryKirk/configure-ad/assets/137613637/6e5f5f45-cedb-4d30-ba1e-75cc39ff91ee" alt="Set Client-1 to DC-1 Private IP" width="500" length="500"/><br /><br />
+<p>11. Next, right-click Start ---> System ---> Remote Desktop ---> Select sers that can remotely access PC ---> Add ---> type "Domain Users" ---> Check Names ---> OK ---> OK. This allows all users of the domain to log in remotely.<br /></p>
+<img src="https://github.com/GaryKirk/configure-ad/assets/137613637/3fea8302-8640-4d37-ab9e-c6ee9d1bd7cf" alt="Grant Remote Access" width="500" length="500"/><br /><br />
 
